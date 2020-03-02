@@ -1,5 +1,5 @@
 import pprint
-cook_book ={}
+
 
 def read_book(filename):
     cook_book ={}
@@ -21,6 +21,7 @@ def read_book(filename):
 
 
 def get_shop_list_by_dishes(dishes, person_count):
+    cook_book = read_book('recipes.txt')
     needed_ingr ={}
     ingr_all = []
     for dish in dishes:
@@ -39,10 +40,8 @@ def get_shop_list_by_dishes(dishes, person_count):
     return needed_ingr
 
 
-cook_book = read_book('recipes.txt')
 #needed_ingr = get_shop_list_by_dishes(['Омлет', 'Фахитос', 'Утка по-пекински'], 2)
 needed_ingr = get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)
-# print(cook_book)
 
 pprint.pprint(needed_ingr)
 
